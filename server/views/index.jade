@@ -2,6 +2,16 @@ extends ../includes/layout
 
 block main-content
   section.content
-    h1 In index
+    .nav.navbar-default
+      .container-fluid
+        .navbar-header
+          .navbar-brand Carpool
+        ul.nav.navbar-nav
+          li
+            a(href="/") About
+            a(href="/") Other Thing
 
     div(ng-view)
+
+    footer.container.text-center
+      p Copyright
