@@ -3,7 +3,7 @@ var express = require('express'),
 
 var app = express();
 
-var env = 'development'
+var env = process.env.NODE_ENV || 'development';
 
 // console.log(__dirname+ '/server/views')
 app.set('views', __dirname+ '/server/views');
@@ -23,6 +23,6 @@ app.get('*', function(req, res) {
   res.render('index');
 })
 
-var port = 8080;
+var port = process.env.PORT || 8080;
 app.listen(port);
 console.log('Nihao from port ' + port + '...')
